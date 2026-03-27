@@ -1,0 +1,32 @@
+---
+title: Cloud Essentials for RabbitMQ - Concepts
+description: Understand key concepts behind Scaleway Cloud Essentials for RabbitMQ.
+tags: cloud essentials rabbitmq concepts glossary terms definitions
+dates:
+  published: 2026-03-27
+  validation: 2026-03-27
+categories:
+  - rabbitmq
+---
+
+## Cloud Essentials
+
+Cloud Essentials aims to provide a vast range of technologies, with a focus on easy deployment and minimal feature set while offering production-ready stability and scalability.
+
+## RabbitMQ
+RabbitMQ is a messaging system designed to publish large volumes of messages, quickly deliver them to consumers, and delete them. It supports multiple protocols, and offers strong support for message delivery guarantees and reliability. It uses the push model, and is well-suited for traditional message queuing and task distribution.
+
+## Producer
+A producer is any application or service that sends messages to the RabbitMQ broker. In a typical architecture, the producer does not send messages directly to a queue; instead, it sends them to an exchange which then routes them based on specific rules.
+
+You can think of producer as the sender of a letter who drops their message into the system, trusting the broker to handle the delivery logic.
+
+## Consumer
+A consumer is an application or service that connects to RabbitMQ to subscribe to and process messages stored in a queue. Consumers can be configured to acknowledge receipt of a message, ensuring that data is never lost if a process fails mid-way.
+
+You can think of a consumer as the recipient of the letter who checks their letterbox and processes the messages they receive, often sending back an acknowledgment once the task is done.
+
+## Queue
+A queue is a sequential buffer that stores messages until they are consumed by an application. Queues are hosted on the RabbitMQ nodes and their properties determine how messages are handled if the broker restarts.
+
+You can think of a queue as a physical waiting line at a counter: messages wait their turn in the order they arrived until a consumer is ready to process them.
